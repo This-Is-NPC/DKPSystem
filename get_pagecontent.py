@@ -55,3 +55,5 @@ def get_pagecontent():
     # Salva o conteúdo em um arquivo
     with open(f'pages/{nome_arquivo}', "w", encoding="utf-8") as arquivo:
         arquivo.write(conteudo)
+
+    print(f'Arquivo {nome_arquivo} salvo com sucesso!')
