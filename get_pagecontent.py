@@ -58,4 +58,5 @@ def get_pagecontent():
 
     print(f'Arquivo {nome_arquivo} salvo com sucesso!')
 
-get_pagecontent()
+if __name__ == "__main__":
+    get_pagecontent()
