@@ -57,3 +57,5 @@ def get_pagecontent():
         arquivo.write(conteudo)
 
     print(f'Arquivo {nome_arquivo} salvo com sucesso!')
+
+get_pagecontent()
