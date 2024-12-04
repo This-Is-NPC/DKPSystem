@@ -16,7 +16,7 @@ Este repositório contém um sistema baseado em Python para gerenciar e distribu
 
 ```bash
 git clone https://github.com/This-Is-NPC/DKPSystem.git
-cd controle-distribuicao-dkp
+cd DKPSystem
 ```
 
 ### 2. Criar Ambiente Virtual
