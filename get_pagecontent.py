@@ -1,8 +1,14 @@
 import pyautogui
 import time
 import pyperclip
+import datetime
 
 def get_pagecontent():
+    # Pega o tempo
+    agora = datetime.datetime.now()
+    # Formata a string
+    data_formatada = agora.strftime("%d_%m_%Y_%H_%M_%S")
+
     # Abre o navegador Edge sem usar um perfil específico
     pyautogui.press('win')
     time.sleep(0.5)
@@ -41,7 +47,7 @@ def get_pagecontent():
 
     # Captura o conteúdo da área de transferência
     conteudo = pyperclip.paste()
-    nome_arquivo = "page.html"
+    nome_arquivo = f"table_dkp_{data_formatada}.html"
 
     # Fecha a página
     pyautogui.hotkey('ctrl', 'w')
