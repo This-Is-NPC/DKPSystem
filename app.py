@@ -107,17 +107,23 @@ def main():
         # Processar arquivos
         df = process_html_files(uploaded_files)
         
+        # Add a toggle in Streamlit sidebar
+        show_data_labels = st.sidebar.toggle('Show Data Labels', value=False)
+
         if not df.empty:
-            # Gráfico do Plotly agora usa player_name como color
             fig = px.line(
                 df.sort_values('datetime'), 
                 x='datetime', 
                 y='dkp', 
                 color='player_name',
+                text='dkp' if show_data_labels else None,  # Conditional text
                 hover_data=['filename'],
                 title='Evolução do DKP por Player',
                 labels={'datetime': 'Data', 'dkp': 'DKP', 'player_name': 'Player'}
             )
+            
+            if show_data_labels:
+                fig.update_traces(textposition='top center')
             
             st.plotly_chart(fig)
             
