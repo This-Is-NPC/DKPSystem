@@ -44,8 +44,16 @@ pip install -r requirements.txt
 ```
 ## Executando a Aplicação
 
+Para executar o download agendado da página html execute o script abaixo
+
 ```bash
 python main.py
+```
+
+Para executar o app para processar os documentos execute o código abaixo
+
+```bash
+streamlit run app.py
 ```
 
 ## Funcionalidades
