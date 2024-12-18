@@ -18,7 +18,7 @@ def get_pagecontent():
     time.sleep(2)
     pyautogui.hotkey('alt', 'space')
     time.sleep(0.2)
-    pyautogui.press('down', presses=5)
+    pyautogui.press('down', presses=5, interval=0.3)
     pyautogui.press('enter')
     time.sleep(0.2)
     pyautogui.hotkey('ctrl', 'l')
